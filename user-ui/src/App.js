@@ -15,6 +15,7 @@ import {
 } from "./components/index";
 import Mybidding from "./pages/Mybidding/Mybidding";
 
+// Hi there,
 function App() {
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
