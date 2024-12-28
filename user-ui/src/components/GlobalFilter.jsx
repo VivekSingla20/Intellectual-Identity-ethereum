@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAsyncDebounce } from "react-table";
 import regeneratorRuntime from "regenerator-runtime";
-import '../css/App.css';
+import "../css/App.css";
 
 // import tw from "twin.macro";
 
@@ -29,10 +29,10 @@ import '../css/App.css';
 // `;
 
 const GlobalFilter = ({
-    preGlobalFilteredRows,
-    globalFilter,
-    setGlobalFilter,
-  }) =>  {
+  preGlobalFilteredRows,
+  globalFilter,
+  setGlobalFilter,
+}) => {
   const count = preGlobalFilteredRows.length;
   const [value, setValue] = useState(globalFilter);
   const onChange = useAsyncDebounce((value) => {
@@ -41,7 +41,7 @@ const GlobalFilter = ({
 
   return (
     <div className="SearchContainer my-10">
-       <input
+      <input
         className="alinput px-3 py-3 rounded-full"
         value={value || ""}
         onChange={(e) => {
@@ -52,6 +52,6 @@ const GlobalFilter = ({
       />
     </div>
   );
-}
+};
 
-export default GlobalFilter
+export default GlobalFilter;

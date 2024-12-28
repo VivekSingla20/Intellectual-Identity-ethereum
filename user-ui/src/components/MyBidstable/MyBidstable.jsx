@@ -1,12 +1,13 @@
-import React, {useEffect, useState, useContext} from 'react'
-import ReactPaginate from 'react-paginate';
-import '../../css/Style.css';
-import { TransactionContext } from '../../context/TransactionContext';
-import { BidderContext } from '../../context/BidderContext';
+import React, { useEffect, useState, useContext } from "react";
+import ReactPaginate from "react-paginate";
+import "../../css/Style.css";
+import { TransactionContext } from "../../context/TransactionContext";
+import { BidderContext } from "../../context/BidderContext";
 
-const MyBidstable = ({data}) => {
-  const { depositBid, refundBid, bidData} = useContext(BidderContext);
-  const { connectWallet, currentAccount, AcceptBid} = useContext(TransactionContext);  
+const MyBidstable = ({ data }) => {
+  const { depositBid, refundBid, bidData } = useContext(BidderContext);
+  const { connectWallet, currentAccount, AcceptBid } =
+    useContext(TransactionContext);
   const [currentItems, setCurrentItems] = useState([]);
 
   const [pageCount, setPageCount] = useState(0);
@@ -23,44 +24,44 @@ const MyBidstable = ({data}) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
     setItemOffset(newOffset);
   };
-  
+
   return (
-    <div className='mx-20 mb-32'>
-      <table className='table table-striped'>
+    <div className="mx-20 mb-32">
+      <table className="table table-striped">
         <thead>
-          <tr className=''>
-            <th className='text-gray-900'>ID</th>
-            <th className='text-gray-900'> Ip Name </th>
-            <th className='text-gray-900'> Bidder Address </th>
-            <th className='text-gray-900'> value </th>
-            <th className='text-gray-900'> Transfer Ownership</th>
-            <th className='text-gray-900'> Bidding Acceptance</th>
-            <th className='text-gray-900'> Bid Date</th>
+          <tr className="">
+            <th className="text-gray-900">ID</th>
+            <th className="text-gray-900"> Ip Name </th>
+            <th className="text-gray-900"> Bidder Address </th>
+            <th className="text-gray-900"> value </th>
+            <th className="text-gray-900"> Transfer Ownership</th>
+            <th className="text-gray-900"> Bidding Acceptance</th>
+            <th className="text-gray-900"> Bid Date</th>
           </tr>
         </thead>
-        <tbody className='bg-gray-100'>
-
-        {data.map((item,index) => ( 
+        <tbody className="bg-gray-100">
+          {data.map((item, index) => (
             <tr key={index}>
-              <td >{index}</td>
-              <td >{item.ownerIPname}</td>    
-              <td className='text-black'>{item.bidderAddress}</td>             
+              <td>{index}</td>
+              <td>{item.ownerIPname}</td>
+              <td className="text-black">{item.bidderAddress}</td>
               <td>{item.bidValue} ether</td>
-              <td className='text-center'>
-                <button 
-                className='bg-black text-white py-1 px-6 rounded'
-                onClick={(event) => refundBid(item.bidValue, item.tokenID, event)} 
+              <td className="text-center">
+                <button
+                  className="bg-black text-white py-1 px-6 rounded"
+                  onClick={(event) =>
+                    refundBid(item.bidValue, item.tokenID, event)
+                  }
                 >
-                Refund
+                  Refund
                 </button>
               </td>
-              <td className='text-center'>{item.bidAccepted}</td>
+              <td className="text-center">{item.bidAccepted}</td>
               <td>{item.timestamp}</td>
             </tr>
-         ))
-         }         
+          ))}
         </tbody>
-      </table> 
+      </table>
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"
@@ -75,8 +76,8 @@ const MyBidstable = ({data}) => {
         nextLinkClassName="page-num"
         activeLinkClassName="active"
       />
-     </div>
-  )
-}
+    </div>
+  );
+};
 
-export default MyBidstable
+export default MyBidstable;

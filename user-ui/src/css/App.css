@@ -47,7 +47,7 @@
   margin-top: 33rem;
 } */
 
-.ball1{
+.ball1 {
   position: absolute;
   background-color: rgba(165, 168, 168, 0.096);
   width: 8rem;
@@ -143,7 +143,7 @@
 }
 
 .banner {
-  height: 100vh; 
+  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -154,7 +154,7 @@
 
 .overlay {
   position: absolute;
-  height: 100vh; 
+  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -167,7 +167,7 @@
   content: "";
   position: absolute;
   background-color: #ffffff;
-  height: 35vh; 
+  height: 35vh;
   width: 50%;
   margin-top: 100vh;
   border-radius: 100%;
@@ -233,7 +233,7 @@
   width: 100%;
 }
 
-.chec{
+.chec {
   margin: 0 auto;
 }
 
@@ -251,11 +251,14 @@
   box-shadow: 0 0 1px 2px rgba(50, 50, 51, 0.425);
 }
 
-.box{
-  background-image: 
-   radial-gradient(at 0% 0%, rgb(240, 240, 255) 0, transparent 50%), 
-   radial-gradient(at 50% 0%, rgb(255, 255, 255) 0, transparent 50%), 
-   radial-gradient(at 100% 0%, rgb(240, 240, 255) 0, transparent 50%);
+.box {
+  background-image: radial-gradient(
+      at 0% 0%,
+      rgb(240, 240, 255) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, rgb(255, 255, 255) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(240, 240, 255) 0, transparent 50%);
 }
 
 .scrolltunnel {
@@ -263,7 +266,7 @@
 /* spacing */
 
 /* IP registration */
-.regis{
+.regis {
   /* width: 35rem; */
   background-color: rgba(0, 0, 0, 0.76);
   top: 0;
@@ -272,17 +275,17 @@
   bottom: 0;
 }
 
-.regform{
+.regform {
   margin-top: 5rem;
   width: 70rem;
   border-radius: 10px;
 }
 
-.cont-one{
+.cont-one {
   width: 32rem;
 }
 
-.cont-two{
+.cont-two {
   width: 32rem;
   margin-top: 104px;
 }
@@ -309,7 +312,6 @@
   background: lightgray;
 }
 
-
 /* Table */
 table {
   font-family: Arial, Helvetica, sans-serif;
@@ -318,15 +320,22 @@ table {
   margin-bottom: 2rem;
 }
 
-table td, table th {
+table td,
+table th {
   border: 1px solid rgba(156, 156, 156, 0.473);
   padding: 8px;
 }
 
-table tr:nth-child(odd){background-color: #ffffff;}
-table tr:nth-child(even){background-color: #ffffff00;}
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff00;
+}
 
-table tr:hover {background-color: rgba(124, 113, 113, 0);}
+table tr:hover {
+  background-color: rgba(124, 113, 113, 0);
+}
 
 table th {
   padding-top: 12px;
@@ -348,7 +357,7 @@ table th {
   .container {
     margin-left: -18rem;
   }
-   
+
   .phot {
     flex-direction: column;
     margin: 40px 254px;
@@ -358,15 +367,13 @@ table th {
     margin-top: 70rem;
   }
 
-  .thirimg{
+  .thirimg {
     margin-top: 0.6rem;
   }
-  
-  
 }
-  
+
 @media (max-width: 768px) {
-  .heading{
+  .heading {
     font-size: 2.5rem;
   }
 
@@ -382,14 +389,14 @@ table th {
     width: 30rem;
   }
 
- .ball1, 
- .ball2,
- .ball3,
- .ball4,
- .ball5,
- .ball6,
- .ball7,
- .ball8 {
+  .ball1,
+  .ball2,
+  .ball3,
+  .ball4,
+  .ball5,
+  .ball6,
+  .ball7,
+  .ball8 {
     display: none;
   }
 
@@ -403,7 +410,7 @@ table th {
     flex-direction: column;
     margin: -10rem 54px;
   }
-  
+
   .content {
     margin-top: 70rem;
   }
@@ -420,7 +427,7 @@ table th {
   .thirimg {
     margin-left: 0;
   }
-  
+
   .box {
     width: 30rem;
   }
@@ -433,7 +440,4 @@ table th {
     margin-top: 0.8rem;
     margin-left: -0.1rem;
   }
-
- }
-
-
+}
