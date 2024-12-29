@@ -244,7 +244,12 @@ const epochTohumanReadble = (timestamp) => {
       }
     }
 
-    if(!dataFetched){ getAllNFTs(); }
+    useEffect(() => {
+      if (!dataFetched) {
+        getAllNFTs(); // Call the function once
+        updateFetched(true); // Set the fetched data state to true to avoid calling again
+      }
+    }, [dataFetched, getAllNFTs]); // Add getAllNFTs to dependencies
 
     async function getNFTData() {
       try {
